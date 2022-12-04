@@ -23,6 +23,7 @@ You may need to give additional user input, for example: press <kbd>Enter</kbd> 
 >Kali Linux<br>
 >Debian<br>
 >Fedora<br>
+>Amazon Linux<br>
 >Rasberry PI - Not available yet<br>
 >Zorin OS<br>
 >Elementary OS<br>
@@ -30,4 +31,3 @@ You may need to give additional user input, for example: press <kbd>Enter</kbd> 
 >Arch Linux<br>
 >Manjaro<br>
 >Gentoo
-
