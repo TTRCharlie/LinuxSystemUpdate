@@ -16,11 +16,12 @@ echo -e "\t5.\tRasberry\t\t6.\tZorin OS"
 echo -e "\t7.\tElementary OS\t\t8.\tLinux Mint"
 echo -e "\t9.\tArch Linux\t\t10.\tManjaro"
 echo -e "\t11.\tGentoo"
+echo -e "\t12.\tAmazon Linux"
 exit
 fi
 
 # Linux Systems
-systems=("ubuntu" "kali" "debian" "fedora" "rasberry" "zorin" "elementary" "linux mint" "arch" "manjaro" "gentoo")
+systems=("ubuntu" "kali" "debian" "fedora" "rasberry" "zorin" "elementary" "linux mint" "arch" "manjaro" "gentoo" "amzn")
 
 # Linux version ID
 . /etc/os-release
@@ -35,7 +36,7 @@ if [[ $ans == [yY] || $ans == [yY][eE][sS] ]]; then
     git pull
 fi
 
-if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${systems[2]} ]] || [[ $ID == ${systems[3]} ]] || [[ $ID == ${systems[4]} ]] || [[ $ID == ${systems[5]} ]] || [[ $ID == ${systems[6]} ]] || [[ $ID == ${systems[7]} ]] || [[ $ID == ${systems[8]} ]] || [[ $ID == ${systems[9]} ]]; then
+if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${systems[2]} ]] || [[ $ID == ${systems[3]} ]] || [[ $ID == ${systems[4]} ]] || [[ $ID == ${systems[5]} ]] || [[ $ID == ${systems[6]} ]] || [[ $ID == ${systems[7]} ]] || [[ $ID == ${systems[8]} ]] || [[ $ID == ${systems[9]} ]] || [[ $ID == ${systems[10]} ]] || [[ $ID == ${systems[11]} ]]; then
     case "$ID" in
     ${systems[0]}) # Ubuntu
         sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
@@ -69,6 +70,9 @@ if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${syste
         ;;
     ${systems[10]}) # Gentoo
         sudo emerge --sync && sudo emerge --update --deep --with-bdeps=y @world
+        ;;
+    ${systems[11]}) # Amazon Linux
+        sudo yum update -y
         ;;
     esac
     clear
