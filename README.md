@@ -24,6 +24,7 @@ You may need to give additional user input, for example: press <kbd>Enter</kbd> 
 >Debian<br>
 >Fedora<br>
 >Red Hat<br>
+>CentOS<br>
 >Amazon Linux<br>
 >AlmaLinux<br>
 >Rasberry PI - Not available yet<br>
