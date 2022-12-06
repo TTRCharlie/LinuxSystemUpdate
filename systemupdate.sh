@@ -18,11 +18,12 @@ echo -e "\t9.\tArch Linux\t\t10.\tManjaro"
 echo -e "\t11.\tGentoo"
 echo -e "\t12.\tAmazon Linux"
 echo -e "\t13.\tAlmaLinux"
+echo -e "\t14.\tRed Hat"
 exit
 fi
 
 # Linux Systems
-systems=("ubuntu" "kali" "debian" "fedora" "rasberry" "zorin" "elementary" "linux mint" "arch" "manjaro" "gentoo" "amzn" "almalinux")
+systems=("ubuntu" "kali" "debian" "fedora" "rasberry" "zorin" "elementary" "linux mint" "arch" "manjaro" "gentoo" "amzn" "almalinux" "rhel")
 
 # Linux version ID
 . /etc/os-release
@@ -37,7 +38,7 @@ if [[ $ans == [yY] || $ans == [yY][eE][sS] ]]; then
     git pull
 fi
 
-if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${systems[2]} ]] || [[ $ID == ${systems[3]} ]] || [[ $ID == ${systems[4]} ]] || [[ $ID == ${systems[5]} ]] || [[ $ID == ${systems[6]} ]] || [[ $ID == ${systems[7]} ]] || [[ $ID == ${systems[8]} ]] || [[ $ID == ${systems[9]} ]] || [[ $ID == ${systems[10]} ]] || [[ $ID == ${systems[11]} ]] | [[ $ID == ${systems[12]} ]]; then
+if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${systems[2]} ]] || [[ $ID == ${systems[3]} ]] || [[ $ID == ${systems[4]} ]] || [[ $ID == ${systems[5]} ]] || [[ $ID == ${systems[6]} ]] || [[ $ID == ${systems[7]} ]] || [[ $ID == ${systems[8]} ]] || [[ $ID == ${systems[9]} ]] || [[ $ID == ${systems[10]} ]] || [[ $ID == ${systems[11]} ]] || [[ $ID == ${systems[12]} ]] || [[ $ID == ${systems[13]} ]]; then
     case "$ID" in
     ${systems[0]}) # Ubuntu
         sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
@@ -76,6 +77,9 @@ if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${syste
         sudo yum update -y
         ;;
     ${systems[12]}) # AlmaLinux
+        sudo yum update -y
+        ;;
+    ${systems[13]}) # Red Hat
         sudo yum update -y
         ;;
     esac
