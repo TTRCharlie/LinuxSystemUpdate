@@ -42,7 +42,7 @@ fi
 if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${systems[2]} ]] || [[ $ID == ${systems[3]} ]] || [[ $ID == ${systems[4]} ]] || [[ $ID == ${systems[5]} ]] || [[ $ID == ${systems[6]} ]] || [[ $ID == ${systems[7]} ]] || [[ $ID == ${systems[8]} ]] || [[ $ID == ${systems[9]} ]] || [[ $ID == ${systems[10]} ]] || [[ $ID == ${systems[11]} ]] || [[ $ID == ${systems[12]} ]] || [[ $ID == ${systems[13]} ]] || [[ $ID == ${systems[14]} ]]; then
     case "$ID" in
     ${systems[0]}) # Ubuntu
-        sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+        sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
         ;;
     ${systems[1]}) # Kali
         sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
@@ -60,10 +60,10 @@ if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${syste
         apt update && apt upgrade && apt autoremove
         ;;
     ${systems[6]}) # Elementary OS
-        sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+        sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
         ;;
     ${systems[7]}) # Linux Mint
-        sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+        sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
         ;;
     ${systems[8]}) # Arch
         sudo pacman -Syyu
