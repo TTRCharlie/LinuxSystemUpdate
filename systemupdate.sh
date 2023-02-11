@@ -87,7 +87,7 @@ if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${syste
         sudo yum update -y
         ;;
     esac
-    clear
+    echo
     echo -e "\e[32mSuccessful Update!"
     echo -e "\e[32mSuccessful Update!"
     echo -e "\e[32mSuccessful Update!\e[39m"
@@ -95,7 +95,7 @@ if [[ $ID == ${systems[0]} ]] || [[ $ID == ${systems[1]} ]] || [[ $ID == ${syste
     echo " "
     echo " "
 else
-    clear
+    echo
     echo -e "\e[31mUpdate failed! Please check the supported OS!"
     echo -e "\e[31mUpdate failed! Please check the supported OS!"
     echo -e "\e[31mUpdate failed! Please check the supported OS!\e[39m"
